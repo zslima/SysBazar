@@ -19,9 +19,9 @@ public class Conexion {
     public static Connection GetConexion() throws ClassNotFoundException, SQLException{
     Connection conex=null;
         Class.forName("com.mysql.jdbc.Driver");
-        String url="jdbc:mysql://localhost/bd_bazarupeu.edu";
+        String url="jdbc:mysql://localhost/bd_bazarupeu";
         String usuario="root";
-        String pass ="";
+        String pass ="root";
         conex =(Connection) DriverManager.getConnection(url,usuario,pass);
     
     return conex;
