@@ -7,7 +7,6 @@
 package pe.edu.upeu.sysbazar.BD;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -48,7 +47,7 @@ public class ClienteBD {
     //-----------------------------------------------------------------------------------------------------
     public int  verificarCliente(String  nomb )
     {
-        sql="SELECT *FROM Cliente WHERE nombre='"+nomb+"'";
+        sql="SELECT *FROM Cliente WHERE nombres='"+nomb+"'";
         try { 
               cx=Conexion.GetConexion();
               st=cx.createStatement();
@@ -146,7 +145,7 @@ public ArrayList<Cliente> listarCliente(){
  
     public ArrayList<Cliente> listarCliente(String nomb){
         ArrayList<Cliente> lista = new ArrayList();
-        sql="Select *from Cliente WHERE nombre LIKE '"+nomb+"'";
+        sql="Select *from Cliente WHERE nombres LIKE '"+nomb+"'";
         try {
             cx = Conexion.GetConexion();
             st=cx.createStatement();
